@@ -16,8 +16,11 @@
             font-size: 2em;
             margin-top: 20px;
         }
-        .hidden {
+        #hidden-link {
             display: none;
+            color: cyan;
+            text-decoration: underline;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -25,7 +28,12 @@
     <h1>破晓之声</h1>
     <p>距破晓终焉剩余：</p>
     <div class="countdown" id="countdown"></div>
+
+    <!-- 隐藏链接 -->
+    <a href="/hidden.html" id="hidden-link">进入下一步</a>
+
     <script>
+        // 倒计时功能
         const countdownElement = document.getElementById('countdown');
         const targetTime = new Date().getTime() + 72 * 60 * 60 * 1000; // 72小时后
         function updateCountdown() {
@@ -40,6 +48,11 @@
             }
         }
         setInterval(updateCountdown, 1000);
+
+        // 显示隐藏链接
+        document.body.addEventListener('click', () => {
+            document.getElementById('hidden-link').style.display = 'block';
+        });
     </script>
 </body>
 </html>
