@@ -6,7 +6,7 @@
     <title>破晓之声</title>
     <style>
         body {
-            background-color: brown;
+            background-color: black;
             color: white;
             font-family: Arial, sans-serif;
             text-align: center;
@@ -18,9 +18,16 @@
         }
         #hidden-link {
             display: none;
+            margin-top: 20px;
             color: cyan;
+            font-size: 1.2em;
             text-decoration: underline;
             cursor: pointer;
+        }
+        #hint {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: gray;
         }
     </style>
 </head>
@@ -31,6 +38,9 @@
 
     <!-- 隐藏链接 -->
     <a href="/hidden.html" id="hidden-link">进入下一步</a>
+
+    <!-- 提示文本 -->
+    <p id="hint">提示：点击屏幕任意位置，寻找破晓的真相。</p>
 
     <script>
         // 倒计时功能
